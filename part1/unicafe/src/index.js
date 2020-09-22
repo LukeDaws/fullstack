@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 
-const Display = props => <div><h3>{props.value}</h3></div>
-
 const Button = (props) => (
   <button onClick={props.handleClick}>{props.text}</button>
-
 )
 
 const App = () => {
@@ -37,6 +34,7 @@ const Statistics = ({good, neutral, bad}) =>{
     )
   return(
     <table>
+    <tbody>
       <tr>
         <td>Good</td><td>{good}</td>
       </tr>
@@ -55,6 +53,7 @@ const Statistics = ({good, neutral, bad}) =>{
       <tr>
         <td>Positive</td><td>{positive}%</td>
       </tr>
+      </tbody>
     </table>
   )
 }
